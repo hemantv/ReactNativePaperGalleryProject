@@ -59,6 +59,8 @@ import * as ToggleButtonDemoCode from './Code/ToggleButton';
 import * as TouchableRippleDemoCode from './Code/TouchableRipple';
 import * as TypographyDemoCode from './Code/Typography';
 
+const REPOSITORY_URL: string =
+  'https://github.com/hemantv/ReactNativePaperGalleryProject/';
 const DOCUMENTATION_BASE_URL: string =
   'https://callstack.github.io/react-native-paper/';
 const COMPONENTS: IComponent[] = [
@@ -631,7 +633,7 @@ const COMPONENTS: IComponent[] = [
       },
     ],
   },
-]; //.reverse();
+];
 
 const COMPONENT_MAP: Map<string, IComponent> = new Map<string, IComponent>(
   COMPONENTS.map(
@@ -649,4 +651,8 @@ const getComponent = (name: string): IComponent => {
   return component;
 };
 
-export { getComponent, getComponents };
+const getDocumentationUrl = () => DOCUMENTATION_BASE_URL;
+
+const getRepositoryUrl = () => REPOSITORY_URL;
+
+export { getComponent, getComponents, getDocumentationUrl, getRepositoryUrl };

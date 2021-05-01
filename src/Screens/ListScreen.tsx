@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
 import React, {useCallback, useContext, useMemo, useState} from 'react';
-import {FlatList, StatusBar, StyleSheet, View} from 'react-native';
+import {FlatList, Linking, StatusBar, StyleSheet, View} from 'react-native';
 import {
   Appbar,
   Button,
@@ -16,7 +16,7 @@ import {
 } from 'react-native-paper';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {PreferencesContext} from '../../App';
-import {getComponents} from '../Assets/Data/Components';
+import {getComponents, getDocumentationUrl, getRepositoryUrl} from '../Assets/Data/Components';
 import {IComponent} from '../Interfaces/IComponent';
 import {ThemeType} from '../Types/ThemeType';
 
@@ -154,14 +154,14 @@ const AboutDialog = ({visible, onDismiss}: AboutDialogProps) => {
               icon={'github'}
               style={{marginVertical: 4}}
               mode={'contained'}
-              onPress={() => {}}>
+              onPress={() => Linking.openURL(getRepositoryUrl())}>
               Source
             </Button>
             <Button
               icon={'text-box-multiple'}
               style={{marginVertical: 4}}
               mode={'contained'}
-              onPress={() => {}}>
+              onPress={() => Linking.openURL(getDocumentationUrl())}>
               Documentation
             </Button>
           </View>
