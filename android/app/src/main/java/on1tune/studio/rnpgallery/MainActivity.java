@@ -1,4 +1,4 @@
-package com.hemantv.rnpapergallery;
+package on1tune.studio.rnpgallery;
 
 import com.facebook.react.ReactActivity;
 

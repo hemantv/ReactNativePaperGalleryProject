@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.hemantv.rnpapergallery"
+        applicationId "on1tune.studio.rnpgallery"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
